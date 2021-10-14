@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+}
+
+.logo {
+    display: block;
+    max-width: 300px;
+    margin: auto;
+}
+
+#input-wrapper {
+    margin: 2em;
+}
+
+
+.form-control {
+    margin-bottom: 2em
+}
+
+/* - [x] Override typical form and label inline behavior */
+fieldset {
+    display: grid;
+}
+
+legend {
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.text-input {
+    height: 3em;
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    font: 80%/80% Verdana, Arial, Helvetica, sans-serif;
+    padding: .6em;
+}
+
+.name-input-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 70%;
+}
+
+.name-input-wrapper:after {
+    font-family: 'FontAwesome';
+    content: '\f304';
+    position: absolute;
+    right: 6px;
+    bottom: .9em;
+}
+
+.email-input-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 70%;
+}
+
+.email-input-wrapper:after {
+    font-family: 'FontAwesome';
+    content: '\f0e0';
+    position: absolute;
+    right: 6px;
+    bottom: .9em;
+}
+
+.age-input-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 40%;
+}
+
+.age-input-wrapper:after {
+    font-family: 'FontAwesome';
+    content: '\f133';
+    position: absolute;
+    right: 6px;
+    bottom: .9em;
+
+}
+
+.comments-input-wrapper {
+
+    position: relative
+}
+
+.comments-input-wrapper:after {
+    font-family: 'FontAwesome';
+    content: '\f304';
+    position: absolute;
+    right: 6px;
+    bottom: .9em;
+}
+
+
+.error-div {
+    color: red;
+}
+
+#submit-button {
+    width: 20%;
+    height: 50px;
+    margin-bottom: 1em;
+}
+
+/* - [x] Overlay an absolute or fixed position video element on hover of the ‘help’ link */
+video {
+    position: absolute;
+    bottom: 0;
+    right: 70px;
+    width: 450px;
+    height: 450px;
+    display: none;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+
+
+.link-wrapper {
+    width: 50px;
+}
+
+.link-wrapper:hover video {
+    display: block;
+}
+
+@media screen and (max-width: 600px) {
+
+    /* - [x] Mediaquery remove labels in mobile view and set width 100% */
+    .label-text {
+        display: none;
+    }
+
+    .text-input {
+        position: relative;
+        width: 100%;
+        padding-left: .4em;
+
+    }
+
+    /* - [x] Use display: grid and @mediaquery to remove the one input not required */
+    .link-wrapper {
+        display: none;
+    }
+
+    /* - [x] Mediaquery remove labels in mobile view and set width 100% */
+
+    .name-input-wrapper {
+        width: 100%;
+    }
+
+    .age-input-wrapper {
+        width: 100%;
+    }
+
+    .email-input-wrapper {
+        width: 100%;
+    }
+
+
+    #submit-button {
+        width: 100%;
+    }
+
+    #experience-input {
+        width: 100%;
+        height: 50px;
+        padding-left: .4em;
+    }
+
+    input {
+        margin-top: 2em;
+    }
+}
+
+/* - [x] Use four form-specific pseudoclasses to aide in user input  */
+
+input:required {
+    border: 2.5px solid grey;
+}
+
+[type=radio]:checked+label {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+select:optional {
+    border: 1px solid blue;
+}
+
+/* - Ensure the user is aware of erroneous input as they are inputting text into your form */
+[type=email]:valid,
+[type=text]:valid,
+[type=number]:valid {
+    border: 1px solid #24ff07;
+}
+
+input:focus:required:invalid {
+    background-color: pink;
+    color: white;
+}
+
+input:required:valid {
+    background-color: white;
+    color: black;
+}
+
+
+/* - [x] Use ::before or ::after pseudoelement to denote fields with required attribute  */
+
+#recommend-control p:after {
+    content: "(required)";
+    color: grey;
+    font-weight: bold;
+}
+
+.error-div:after {
+    content: "(required)";
+    color: grey;
+    font-weight: bold;
+}
