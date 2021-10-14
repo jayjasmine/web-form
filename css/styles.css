@@ -122,8 +122,8 @@ textarea {
 /* - [x] Overlay an absolute or fixed position video element on hover of the ‘help’ link */
 video {
     position: absolute;
-    bottom: 0;
-    right: 70px;
+    top: 75vh;
+    left: 25vw;
     width: 450px;
     height: 450px;
     display: none;
