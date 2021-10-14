@@ -14,20 +14,20 @@
 
 <body>
     <header>
-        <img src="assets/logo.svg" class="logo">
+        <img src="assets/logo.svg" class="logo" alt="logo">
     </header>
     <main>
         <section id="form-wrapper">
             <form action="#" method="post">
                 <fieldset id="survey-fieldset">
+                    <legend>Customer Survey</legend>
                     <div id="input-wrapper">
-                        <legend>Customer Survey</legend>
                         <div class="form-control" id="name-control">
-                            <label for="name" class="label-text">Name</label><br>
+                            <label for="name-input" class="label-text">Name</label><br>
                             <div class="name-input-wrapper">
                                 <input type="text" pattern="^([ \u00c0-\u01ffa-zA-Z'\-]){2,50}$"
                                     title="Please enter only letters (hyphens and spaces may be included)" name="name"
-                                    id="name-input" required="true" placeholder="Enter your name" class="text-input"
+                                    id="name-input" placeholder="Enter your name" class="text-input"
                                     oninput="checkNameInput()" required>
                             </div>
                             <!-- - [x] Element(s) for errors in form input empty by default -->
@@ -35,7 +35,7 @@
                         </div>
 
                         <div class="form-control" id="email-control">
-                            <label for="email" class="label-text">Email</label><br>
+                            <label for="email-input" class="label-text">Email</label><br>
                             <div class="email-input-wrapper">
                                 <input type="email" class="text-input" name="email" id="email-input"
                                     placeholder="Enter email" oninput="checkEmailInput()" required>
@@ -43,7 +43,7 @@
                             <div class="error-div" id="email-error"></div>
                         </div>
                         <div class="form-control" id="age-control">
-                            <label for="age" class="label-text">Age</label><br>
+                            <label for="age-input" class="label-text">Age</label><br>
                             <div class="age-input-wrapper">
                                 <input type="number" name="age" class="text-input" id="age-input"
                                     placeholder="Enter your age" min="0" max="130" oninput="checkAgeInput()" required>
@@ -52,7 +52,7 @@
                         </div>
                         <div class="form-control" id="experience-control">
                             <p>Which option best describes you?</p><br>
-                            <select name="experience" id="experience-input" optional>
+                            <select name="experience" id="experience-input">
                                 <option value="none">Prefer not say</option>
                                 <option value="new">New dog owner</option>
                                 <option value="experienced">Experienced dog owner</option>
@@ -71,7 +71,7 @@
 
                         <div class="form-control" id="services-control">
                             <p>What Doggo Daycare services did you use?</p><br>
-                            <input type="checkbox" id="service1" name="service1" value="grooming">
+                            <input type="checkbox" id="service1" name="service1" value="grooming" >
                             <label for="service1">Grooming</label><br>
 
                             <input type="checkbox" id="service2" name="service2" value="Training">

@@ -204,11 +204,7 @@ input:required {
     font-size: 1.1rem;
 }
 
-select:optional {
-    border: 1px solid blue;
-}
 
-/* - Ensure the user is aware of erroneous input as they are inputting text into your form */
 [type=email]:valid,
 [type=text]:valid,
 [type=number]:valid {
