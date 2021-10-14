@@ -141,6 +141,10 @@ video {
 }
 
 @media screen and (max-width: 600px) {
+    .logo {
+        display: block;
+        max-width: 150px;
+    }
 
     /* - [x] Mediaquery remove labels in mobile view and set width 100% */
     .label-text {
