@@ -22,28 +22,34 @@ main {
     margin: auto;
 }
 
-#input-wrapper {
-    margin: 2em;
-}
-
-
-.form-control {
-    margin-bottom: 2em
+section {
+    margin-bottom: 2em;
+    min-width: 100%;
 }
 
 /* - [x] Override typical form and label inline behavior */
 fieldset {
     display: grid;
+    padding: 2em;
+    background-color: bisque;
 }
 
 legend {
     text-align: center;
     padding-bottom: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
 }
 
 .text-input {
     height: 3em;
     width: 100%;
+}
+
+.label-text,
+p {
+    margin-top: 1em;
 }
 
 textarea {
@@ -55,7 +61,6 @@ textarea {
 .name-input-wrapper {
     display: inline-block;
     position: relative;
-    width: 70%;
 }
 
 .name-input-wrapper:after {
@@ -69,7 +74,6 @@ textarea {
 .email-input-wrapper {
     display: inline-block;
     position: relative;
-    width: 70%;
 }
 
 .email-input-wrapper:after {
@@ -83,7 +87,6 @@ textarea {
 .age-input-wrapper {
     display: inline-block;
     position: relative;
-    width: 40%;
 }
 
 .age-input-wrapper:after {
@@ -95,8 +98,13 @@ textarea {
 
 }
 
-.comments-input-wrapper {
+#experience-input {
+    width: 100%;
+    height: 50px;
+    padding-left: .4em;
+}
 
+.comments-input-wrapper {
     position: relative
 }
 
@@ -114,9 +122,10 @@ textarea {
 }
 
 #submit-button {
-    width: 20%;
+    width: 100%;
     height: 50px;
     margin-bottom: 1em;
+
 }
 
 /* - [x] Overlay an absolute or fixed position video element on hover of the ‘help’ link */
@@ -159,7 +168,7 @@ video {
     }
 
     /* - [x] Use display: grid and @mediaquery to remove the one input not required */
-    .link-wrapper {
+    #recommend-control {
         display: none;
     }
 
@@ -177,19 +186,9 @@ video {
         width: 100%;
     }
 
-
-    #submit-button {
-        width: 100%;
-    }
-
-    #experience-input {
-        width: 100%;
-        height: 50px;
-        padding-left: .4em;
-    }
-
     input {
         margin-top: 2em;
+
     }
 }
 
