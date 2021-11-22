@@ -32,14 +32,16 @@ fieldset {
     display: grid;
     padding: 2em;
     background-color: bisque;
+    border: none;
 }
 
 legend {
     text-align: center;
-    padding-bottom: 1em;
+    padding-bottom: 2em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2em;
     font-weight: bold;
+
 }
 
 .text-input {
